@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>MyStudyProject</artifactId>
+		<groupId>com.ll</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.ll</groupId>
+	<artifactId>ActiveMQ</artifactId>
+	<version>1.0.0</version>
+	<name>ActiveMQ</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<Dependency.version>1.0.0</Dependency.version>
+		<activemq-core-Version>5.6.0</activemq-core-Version>
+        <activemq-pool-Version>5.6.0</activemq-pool-Version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ll</groupId>
+			<artifactId>Dependencies</artifactId>
+			<version>${Dependency.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>${activemq-core-Version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-pool</artifactId>
+            <version>${activemq-pool-Version}</version>
+        </dependency>
+	</dependencies>
+</project>

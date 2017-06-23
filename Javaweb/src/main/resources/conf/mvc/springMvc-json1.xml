@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<!-- 默认时，会将ModelMap中所有的对象都解析成Json并返回。
+	 这不是我们想要的，我们只需要解析ModelMap中的一部分对象，这里通过设置属性renderedAttributes来指定 。
+	  使用BeanNameViewResolver进行解析。 -->
+	<bean id="userListJson"
+		class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+		<property name="renderedAttributes">
+			<set>
+				<value>userList</value>
+				<value>School</value>
+				<value>Work</value>
+			</set>
+		</property>
+	</bean>
+	
+	<!-- XMl及JSON视图解析器配置 -->
+    <!--如果仅仅返回一个对象的json数据，可以使用简写配置： -->
+    <!-- <bean id="userListJson" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" 
+        p:renderedAttributes="userList" /> -->
+
+
+	<bean id="testMVC"
+		class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+		<property name="renderedAttributes">
+			<set>
+				<value>userList</value>
+				<value>Info</value>
+			</set>
+		</property>
+	</bean>
+</beans>

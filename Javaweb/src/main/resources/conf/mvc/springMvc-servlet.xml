@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<context:component-scan base-package="com.ll.springMvc" />
+
+
+	<!-- 会自动注册：DefaultAnnotationHandlerMapping 和 AnnotationMethodHandlerAdapter， 
+		这两个bean是spring MVC为@Controllers分发请求所必须的。 并提供了数据绑定支持，@NumberFormatannotation支持，@DateTimeFormat支持， 
+		@Valid支持，读写XML的支持（JAXB），读写JSON的支持（Jackson） -->
+	<mvc:annotation-driven />
+
+	<!--每个视图解析器的优先级都是可以手动设置的。在进行视图解析时，按照视图解析器优先级的顺序去解析视图，直到有视图解析器可以进行解析，解析过程就停止 -->
+
+	<!--spring mvc默认的最常用的视图解析器， 将ModelAndWiew以及字符串解析为具体的界面，它的优先级默认是最低的 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/views/" p:suffix=".jsp" />
+
+	<!-- 设置优先级为10 -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver"
+		p:order="10" />
+
+</beans>

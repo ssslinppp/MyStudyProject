@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>MyStudyProject</artifactId>
+		<groupId>com.ll</groupId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>com.ll</groupId>
+	<artifactId>MapReduce</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>MapReduce</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<Dependency.version>1.0.0</Dependency.version>
+		<hadoopVersion>2.5.2</hadoopVersion>
+		<avro.Version>1.7.4</avro.Version>
+		<hamcrest.version>1.3</hamcrest.version>
+		<mrunit.version>0.8.0-incubating</mrunit.version>
+		<hadoopTest.version>2.5.0-mr1-cdh5.3.10</hadoopTest.version>
+		<jerseyCore.version>1.8</jerseyCore.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.ll</groupId>
+			<artifactId>Dependencies</artifactId>
+			<version>${Dependency.version}</version>
+		</dependency>
+		
+		<!-- Hadoop -->
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-common</artifactId>
+			<version>${hadoopVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-hdfs</artifactId>
+			<version>${hadoopVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-mapreduce-client-core</artifactId>
+			<version>${hadoopVersion}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-client</artifactId>
+			<version>${hadoopVersion}</version>
+		</dependency>
+		<!-- Hadoop -->
+
+		<!-- avro start -->
+		<dependency>
+			<groupId>org.apache.avro</groupId>
+			<artifactId>avro-mapred</artifactId>
+			<version>${avro.Version}</version>
+		</dependency>
+		<!-- avro end -->
+		
+		<dependency>
+			<groupId>org.apache.mrunit</groupId>
+			<artifactId>mrunit</artifactId>
+			<version>${mrunit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

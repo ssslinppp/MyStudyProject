@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	<display-name>Java Web</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!--Spring 文件路径 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:conf/beans/beans-*.xml</param-value>
+	</context-param>
+
+	<!-- spring上下文监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+
+	<!-- 解决中文乱码 -->
+	<filter>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- jersey Servlet start -->
+	<servlet>
+		<servlet-name>rest-inside</servlet-name>
+		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<!-- 设置Restful实例的位置 -->
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.ll.jersey</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>rest-inside</servlet-name>
+		<url-pattern>/jersey/rest/*</url-pattern>
+	</servlet-mapping>
+	<!-- jersey Servlet end -->
+
+	<!--HessianServlet start -->
+	<servlet>
+		<!-- 配置 HessianServlet -->
+		<servlet-name>helloService</servlet-name>
+		<servlet-class>com.caucho.hessian.server.HessianServlet</servlet-class>
+
+		<!-- 配置接口的具体实现类 -->
+		<init-param>
+			<param-name>service-class</param-name>
+			<param-value>com.ll.rpc.HelloServiceImpl</param-value>
+		</init-param>
+	</servlet>
+	<!-- 映射 HessianServlet的访问URL地址 -->
+	<servlet-mapping>
+		<servlet-name>helloService</servlet-name>
+		<url-pattern>/helloService</url-pattern>
+	</servlet-mapping>
+	<!--HessianServlet end -->
+
+	<!--springMVC start -->
+	<servlet>
+		<servlet-name>springMvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:conf/mvc/springMvc-*.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springMvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<!--springMVC end -->
+
+</web-app>

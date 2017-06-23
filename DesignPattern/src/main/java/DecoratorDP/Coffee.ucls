@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.4" icons="false" automaticImage="GIF" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="DecoratorDP.BeverageComponent" project="HeadFirstDesignPattern" 
+    file="/HeadFirstDesignPattern/src/DecoratorDP/BeverageComponent.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position x="460" y="182" width="144" height="91"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="true" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="DecoratorDP.CondimentDecorator" project="HeadFirstDesignPattern" 
+    file="/HeadFirstDesignPattern/src/DecoratorDP/CondimentDecorator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position x="652" y="356" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="true" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="DecoratorDP.Decorator.Milk" project="HeadFirstDesignPattern" 
+    file="/HeadFirstDesignPattern/src/DecoratorDP/Decorator/Milk.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position x="405" y="487" width="212" height="131"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="false" package="true" protected="false" private="true" static="false"/>      
+      <operations public="true" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="DecoratorDP.Decorator.Whip" project="HeadFirstDesignPattern" 
+    file="/HeadFirstDesignPattern/src/DecoratorDP/Decorator/Whip.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position x="638" y="486" width="198" height="127"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="false" package="true" protected="false" private="true" static="false"/>      
+      <operations public="true" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="DecoratorDP.CoffeeComponent.Espressso" project="HeadFirstDesignPattern" 
+    file="/HeadFirstDesignPattern/src/DecoratorDP/CoffeeComponent/Espressso.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position x="216" y="350" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="true" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="DecoratorDP.CoffeeComponent.HouseBlend" project="HeadFirstDesignPattern" 
+    file="/HeadFirstDesignPattern/src/DecoratorDP/CoffeeComponent/HouseBlend.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position x="368" y="351" width="-1" height="-1"/>    
+    <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="false"/>      
+      <operations public="true" package="false" protected="false" private="false" static="false"/>    
+    </display>  
+  </class>  
+  <generalization id="7">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="9">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="10">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="false" package="false" protected="false" private="false" static="false"/>    
+    <operations public="true" package="false" protected="false" private="false" static="false"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

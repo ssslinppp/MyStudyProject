@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ActiveMQ" />
+        <module name="Concurrent" />
+        <module name="Dependencies" />
+        <module name="DesignPattern" />
+        <module name="Javaweb" />
+        <module name="Lucene" />
+        <module name="MapReduce" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ActiveMQ" target="1.8" />
+      <module name="Concurrent" target="1.8" />
+      <module name="Dependencies" target="1.8" />
+      <module name="DesignPattern" target="1.8" />
+      <module name="Javaweb" target="1.8" />
+      <module name="Lucene" target="1.8" />
+      <module name="MapReduce" target="1.8" />
+      <module name="MyStudyProject" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

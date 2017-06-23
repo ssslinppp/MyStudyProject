@@ -1,0 +1,10 @@
+Lucene的搜索排名，是根据score的值的大小进行排名的，score值越大，排名越靠前；
+这里给出了两种方式来，来影响score值的大小；
+---------------------
+方式1：BoostRelevantScore.java
+通过在索引时，设置Boost值的大小来改变score；
+boost的值越大，score会越大；
+======================
+方式2:
+Similarity是计算score的底层API；
+通过自定义的Similarity，来改变score值

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ActiveMQ" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Concurrent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Dependencies" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DesignPattern" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Javaweb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Lucene" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MapReduce" charset="UTF-8" />
+  </component>
+</project>

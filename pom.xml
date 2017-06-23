@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ll</groupId>
+    <artifactId>MyStudyProject</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <distributionManagement>
+        <site>
+            <id>website</id>
+            <url>scp://webhost.company.com/www/website</url>
+        </site>
+    </distributionManagement>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--<maven-compiler-plugin.version>2.5.1</maven-compiler-plugin.version>-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>Lucene</module>
+        <module>Dependencies</module>
+        <module>DesignPattern</module>
+        <module>Javaweb</module>
+        <module>Concurrent</module>
+        <module>ActiveMQ</module>
+        <module>MapReduce</module>
+    </modules>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!--<version>${maven-compiler-plugin.version}</version>-->
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>  <!-- “编码 GBK 的不可映射字符”问题的解决 -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
